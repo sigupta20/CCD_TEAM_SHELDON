@@ -101,7 +101,12 @@ public class GUI
     {
         Properties defConfFile = new Properties();
         Properties confFile = new Properties();
-        File outFile = new File(GUI.getJarPath() + File.separator + "config.txt");
+       // File outFile = new File(GUI.getJarPath() + File.separator + "config.txt");
+       // File outFile = new File("config.txt");
+       // File outFile = new File(GUI.getJarPath() + "/jchess/" + File.separator + "config.txt");
+        File outFile = new File(GUI.getJarPath() + "/jchess/" + "config.txt");
+        System.out.println("Outfile:- " + outFile);
+        
         try
         {
             defConfFile.load(GUI.class.getResourceAsStream("config.txt"));
